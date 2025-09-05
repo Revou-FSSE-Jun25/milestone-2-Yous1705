@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Number</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(0 0% 100%)',
+                        foreground: 'hsl(222.2 84% 4.9%)',
+                        primary: 'hsl(222.2 47.4% 11.2%)',
+                        'muted-foreground': 'hsl(215.4 16.3% 46.9%)',
+                        border: 'hsl(214.3 31.8% 91.4%)',
+                        card: 'hsl(0 0% 100%)',
+                        'card-foreground': 'hsl(222.2 84% 4.9%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-background p-6">
+    <div id="header"></div>
+    <div class="mt-20 mb-20 flex justify-center items-center">
+        <div class="bg-card border border-border rounded-lg shadow-sm p-6 w-full max-w-md">
+            <h1 class="text-2xl font-bold text-foreground mb-4 text-center">Guess the Number Game</h1>
+            <p class="text-muted-foreground mb-4">I'm thinking of a number between 1 and 100. Can you guess it?</p>
+            <input type="number" id="userInput" class="w-full border border-border rounded-md p-2 mb-4"
+                placeholder="Enter your guess" />
+            <button id="submitGuess"
+                class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors mb-4">
+                Submit Guess
+            </button>
+            <p id="feedback" class="text-center text-muted-foreground mb-4"></p>
+            <p id="attempts" class="text-center text-muted-foreground">Attempts: 0</p>
+            <button id="restartGame"
+                class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors mt-4 hidden">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script type="module" src="../function/guessGameLogic.js"></script>
+    <script src="../component/layout.js"></script>
+</body>
+
+</html>

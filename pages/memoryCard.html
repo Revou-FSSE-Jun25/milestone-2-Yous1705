@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(0 0% 100%)',
+                        foreground: 'hsl(222.2 84% 4.9%)',
+                        primary: 'hsl(222.2 47.4% 11.2%)',
+                        'muted-foreground': 'hsl(215.4 16.3% 46.9%)',
+                        border: 'hsl(214.3 31.8% 91.4%)',
+                        card: 'hsl(0 0% 100%)',
+                        'card-foreground': 'hsl(222.2 84% 4.9%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+< class="min-h-screen bg-background flex flex-col items-center justify-center p-6">
+    <div id="header"></div>
+    <div class="mt-20 mb-20 flex justify-center items-center">
+        <div class="bg-card border border-border rounded-lg shadow-sm p-6 w-full max-w-md">
+            <h1 class="text-2xl font-bold text-foreground mb-4 text-center">Memory Card Game</h1>
+            <p class="text-muted-foreground mb-4">Find all the matching pairs of cards!</p>
+
+            <!-- ✅ Diperbaiki: Tambah elemen #result untuk menampilkan pesan -->
+            <p id="result" class="text-center text-foreground mb-2">Find all matching pairs!</p>
+
+            <div id="gameBoard" class="grid grid-cols-4 gap-4 mb-4">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+
+            <!-- ✅ Diperbaiki: Attempts akan diupdate dari JS -->
+            <p id="attempts" class="text-center text-muted-foreground">Attempts: 0</p>
+
+            <button id="restartGame"
+                class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors mt-4 hidden">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    </body>
+    <script type="module" src="../function/memoryGameLogic.js"></script>
+    <script src="../component/layout.js"></script>
+
+</html>
