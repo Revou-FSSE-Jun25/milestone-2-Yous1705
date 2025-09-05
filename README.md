@@ -65,9 +65,10 @@ This website provides 4 games that can be played, along with contacts to contact
 
 ### Memory Card Game
 
-    A number-guessing game where the computer randomly selects a number,
-    and the player must guess it. Feedback is provided on whether the
-    guess is too high or too low until the player finds the correct number.
+    A card-matching game where players memorize their positions.
+    Players turn over two cards each turn and must find matching
+    pairs. The goal is to complete all the pairs in as few moves
+    as possible.
 
 ![Game Preview](images/ssMemory.png)
 
